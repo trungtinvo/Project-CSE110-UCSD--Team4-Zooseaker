@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Viewer.RoutePlanSummaryActivity">
+
+    <Button
+        android:id="@+id/directions_button"
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_width="125dp"
+        android:layout_height="54dp"
+        android:background="@android:color/holo_green_dark"
+        android:backgroundTint="#8BC34A"
+        android:fontFamily="monospace"
+        android:onClick="onDirectionsButtonClicked"
+        android:text="directions"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <Button
+        android:id="@+id/clear_button"
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_width="125dp"
+        android:layout_height="54dp"
+        android:background="@android:color/holo_green_dark"
+        android:backgroundTint="#8BC34A"
+        android:fontFamily="monospace"
+        android:onClick="onClearButtonClicked"
+        android:text="Clear"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <TextView
+        android:id="@+id/added_text"
+        android:layout_width="100dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="165dp"
+        android:fontFamily="monospace"
+        android:paddingTop="4pt"
+        android:text="ROUTE"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/route_plan_summary"
+        android:layout_width="386dp"
+        android:layout_height="489dp"
+        android:paddingTop="8pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/added_text"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
